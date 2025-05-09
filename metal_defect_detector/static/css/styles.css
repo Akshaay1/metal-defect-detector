@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Upload Area Styles */
+.upload-area {
+    border: 2px dashed #ced4da;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover, .upload-area.drag-over {
+    border-color: #007bff;
+    background-color: #f0f7ff;
+}
+
+.upload-info {
+    color: #6c757d;
+}
+
+.upload-info i {
+    color: #007bff;
+}
+
+.image-preview {
+    margin-top: 15px;
+    display: none;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 5px;
+}
+
+/* Model Selection Styles */
+.model-selection {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Results Section Styles */
+.result-image {
+    border: 1px solid #e9ecef;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.result-image img {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.defect-result {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.defect-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff3cd;
+    border-radius: 50%;
+}
+
+/* Defect Info Styles */
+.defect-info {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.info-section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.info-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Training Page Styles */
+.tab-content {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 20px;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+    font-weight: 600;
+}
+
+.upload-status, .preprocess-status, .training-status {
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+}
+
+.training-progress {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Model Prediction Styles */
+.prediction-bar {
+    height: 25px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.prediction-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .card-body {
+        padding: 15px;
+    }
+    
+    .result-details {
+        margin-top: 20px;
+    }
+} 

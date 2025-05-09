@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Metal Defect Detector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">Metal Defect Detector</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/train">Training</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/visualize">Visualize</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-4 mb-4">About Metal Defect Detector</h1>
+                <p class="lead">
+                    This application uses deep learning models to detect and classify various types of metal surface defects, providing Grad-CAM visualizations to pinpoint defect locations.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h3>Data Balancing</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            The original dataset contained an imbalanced distribution of defect classes, leading to biased model predictions. 
+                            We implemented data augmentation strategies to create a balanced dataset with 50 images per class.
+                        </p>
+                        <h5>Augmentation techniques used:</h5>
+                        <ul>
+                            <li>Spatial transformations (rotation, flipping, scaling)</li>
+                            <li>Color and contrast adjustments</li>
+                            <li>Noise and blur variations</li>
+                            <li>Texture enhancements for defect visualization</li>
+                            <li>Geometric distortions to simulate real-world conditions</li>
+                        </ul>
+                        <p>
+                            The balanced dataset significantly improves model performance and reduces bias toward overrepresented classes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h3>Enhanced Visualization</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            We improved the Grad-CAM visualization to provide clearer indications of detected defect regions.
+                            The improved visualization includes:
+                        </p>
+                        <ul>
+                            <li>Higher resolution output (200 DPI)</li>
+                            <li>Enhanced contrast for better visibility</li>
+                            <li>Proper RGB color handling for consistent visualization</li>
+                            <li>Histogram equalization to highlight subtle features</li>
+                            <li>Increased heatmap weight for more prominent defect highlighting</li>
+                        </ul>
+                        <p>
+                            These improvements make it easier to locate and understand detected defects in metal surfaces.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h3>Models Used</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            The system employs multiple state-of-the-art deep learning architectures to ensure robust defect detection:
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>ResNet50:</strong> Deep residual network with 50 layers, excellent at learning complex features without degradation
+                            </li>
+                            <li>
+                                <strong>EfficientNet:</strong> Optimized CNN architecture with balanced depth, width, and resolution for efficient learning
+                            </li>
+                            <li>
+                                <strong>DenseNet:</strong> Densely connected network where each layer receives inputs from all previous layers, capturing fine details
+                            </li>
+                            <li>
+                                <strong>MobileNet:</strong> Lightweight architecture designed for mobile devices, providing fast inference times
+                            </li>
+                        </ul>
+                        <p>
+                            The models are combined using ensemble techniques to improve the overall accuracy and robustness of defect classification.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h3>Defect Categories</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            The system can identify the following categories of metal surface defects:
+                        </p>
+                        <ul>
+                            <li><strong>Crazing:</strong> Network of fine cracks on the metal surface</li>
+                            <li><strong>Cracks:</strong> Linear breaks or fractures in the metal</li>
+                            <li><strong>Inclusions:</strong> Foreign particles embedded in the metal matrix</li>
+                            <li><strong>Scratches:</strong> Linear marks or grooves on the surface</li>
+                            <li><strong>Indentation:</strong> Localized depression or dent in the surface</li>
+                            <li><strong>Oil Spots:</strong> Discolored areas due to oil contamination</li>
+                            <li><strong>Rolling:</strong> Surface defects from rolling process</li>
+                            <li><strong>Rusting:</strong> Oxidation on the metal surface</li>
+                            <li><strong>Welding Line:</strong> Defects along welding seams</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-3 mt-5 bg-dark text-white">
+        <div class="container text-center">
+            <p class="mb-0">Metal Defect Detector &copy; 2023 | Advanced Microscopic Defect Analysis</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
