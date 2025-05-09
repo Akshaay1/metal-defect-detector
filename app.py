@@ -36,7 +36,7 @@ def download_and_extract_models():
     os.makedirs('models/single', exist_ok=True)
     
     # Note: Replace YOUR_USERNAME with actual GitHub username when deploying
-    models_url = "https://github.com/YOUR_USERNAME/metal-defect-detector/releases/download/v1.0/models.zip"
+    models_url = "https://github.com/Akshaay1/metal-defect-detector/releases/download/v1.0/models.zip"
     response = requests.get(models_url)
     
     if response.status_code == 200:
